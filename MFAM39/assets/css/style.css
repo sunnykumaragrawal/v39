@@ -23,6 +23,34 @@ a:hover {
   width: 100%;
 }
 
+.normal-scroll-item{
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+}
+
+.arrow-item{
+  position: absolute;
+  right: 20px;
+  top: calc(100vh - 120px);
+  width: 50px;
+  height: 100px;
+}
+
+.arrow-item a{
+  width: 50px;
+  height: 50px;
+  background-color: #691999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-item a i{
+  color: #fff;
+  font-size: 24px;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -41,7 +69,7 @@ a:hover {
   width: 25vw;
   background: #691999;
   overflow-y: scroll;
-  transition: 0.4s;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav-menu::-webkit-scrollbar{
@@ -63,7 +91,7 @@ a:hover {
   height: 12.5vh;
   position: relative;
   padding: 10px 20px 10px 60px;
-  transition: 0.3s;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav-menu a img{
@@ -116,18 +144,18 @@ a:hover {
   z-index: 9998;
   border: 0;
   background: #691999;
-  transition: all 0.4s;
+  transition: all 0.4s ease-in-out;
   outline: none !important;
   line-height: 1;
   cursor: pointer;
   text-align: right;
-  padding: 10px 12px;
-  border-radius: 2px;
+  padding: 10px 10px;
+  border-radius: 50%;
 }
 
 .nav-toggle i {
   color: #fff;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .nav-toggle-active {
@@ -149,7 +177,7 @@ a:hover {
 # Sections General
 --------------------------------------------------------------*/
 .section-bg {
-  background-color: #fff7f2;
+  background-color: #fff7f2 /*#fff7f2*/;
 }
 
 .section-title{
@@ -216,10 +244,20 @@ a:hover {
 .about-left{
   height: 100vh;
   background-color: #691999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .about-img{
   margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-img img{
+  border-radius: 15px;
+  max-height: 250px;
 }
 
 .about-info p{
@@ -237,10 +275,12 @@ a:hover {
 }
 
 .about-item{
+  background-color: #fff;
   text-align: center;
   padding: 20px;
   border: 2px solid #691999;
   margin-bottom: 25px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
 }
 
 .about-item .about-icon{
@@ -281,10 +321,12 @@ a:hover {
 }
 
 .resource-item{
+  background-color: #fff;
   text-align: center;
   padding: 20px;
   border: 2px solid #691999;
   margin-bottom: 25px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
 }
 
 .resource-item .resource-icon{
@@ -328,10 +370,12 @@ a:hover {
 }
 
 .service-item{
+  background-color: #fff;
   text-align: center;
   padding: 20px;
   border: 2px solid #691999;
   margin-bottom: 25px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
 }
 
 .service-item .service-icon{
@@ -370,6 +414,7 @@ a:hover {
 }
 
 .insurance-item{
+  background-color: #fff;
   height: 120px;
   padding: 20px;
   margin-bottom: 25px;
@@ -377,6 +422,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
 }
 
 .insurance-item img{
@@ -400,6 +446,81 @@ a:hover {
   width: 0;
 }
 
+.recentblog-item{
+  background-color: #fff;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
+}
+
+.recentblog-item .recentblog-img{}
+
+.recentblog-item .recentblog-content{
+  padding: 20px;
+}
+
+.recentblog-item .recentblog-content h5{
+  font-weight: 700;
+}
+
+.recentblog-item .recentblog-content p{
+  
+}
+
+.recentblog-author{
+  background-color: #691999;
+  height: 70px;
+  padding: 10px;
+  position: relative;
+}
+
+.recentblog-author img{
+  width: 50px !important;
+  height: 50px !important;
+  float: left;
+  margin-right: 12px;
+  border-radius: 10px;
+}
+
+.recentblog-author h5{
+  color: #fff;
+  padding-top: 15px;
+} 
+
+.recentblog-btn{
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 10px;
+}
+
+.recentblog-btn i{
+  color: #691999;
+  font-size: 32px;
+}
+
+.recentblog-imgbar .recentblog-icon{
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.recentblog-imgbar .recentblog-icon::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(105, 25, 153, 0.6);
+}
+
+
+
 /*--------------------------------------------------------------
 # Doctors
 --------------------------------------------------------------*/
@@ -421,7 +542,8 @@ a:hover {
   text-align: center;
   overflow: hidden;
   position: relative;
-  transition: all 0.3s ease-in-out 0s; 
+  background-color: #fff;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
 }
 
 .doctor-item .doctor-img:before {
@@ -434,7 +556,7 @@ a:hover {
   right: 10px;
   opacity: 0.78;
   transform: scale(0);
-  transition: all 0.3s ease-in-out 0s; 
+  transition: all 0.4s ease-in-out; 
 }
 
 .doctor-item .doctor-img img {
@@ -450,13 +572,13 @@ a:hover {
   position: absolute;
   top: 40%;
   opacity: 0;
-  transition: all 0.3s ease-in-out 0s; 
+  transition: all 0.4s ease-in-out 0s; 
 }
 
 .doctor-item .doctor-img .doctor-social li {
   display: inline-block;
   position: relative;
-  transition: all 0.3s ease-in-out 0s; 
+  transition: all 0.4s ease-in-out 0s; 
 }
 
 .doctor-item .doctor-img .doctor-social li a {
@@ -469,12 +591,12 @@ a:hover {
   color: #fff;
   margin: 0 15px 0 0;
   transform: rotate(45deg);
-  transition: all 0.3s ease-in-out 0s; 
+  transition: all 0.4s ease-in-out 0s; 
 }
 
 .doctor-item .doctor-img .doctor-social li a i {
   transform: rotate(-45deg);
-  transition: all 0.3s ease-in-out 0s; 
+  transition: all 0.4s ease-in-out 0s; 
 }
 
 .doctor-item .doctor-img .doctor-social li a:hover {
@@ -506,12 +628,10 @@ a:hover {
 
 .doctor-item .doctor-content {
   padding: 15px 10px;
-  background: #f8f9fa;
-  position: relative;
-  transition: all 0.3s ease-in-out 0s; 
+  background: #ffff;
 }
 
-.doctor-item .doctor-content .title {
+.doctor-item .doctor-content h5{
   font-size: 18px;
   font-weight: 700;
   color: #691999;
@@ -520,30 +640,10 @@ a:hover {
   margin: 0 0 12px 0; 
 }
 
-.doctor-item .doctor-content small {
-  display: block;
-  font-size: 14px;
+.doctor-item .doctor-content p{
+  font-size: 16px;
   color: #999;
   margin-bottom: 8px; 
-}
-
-.doctor-item .team-layer {
-  width: 100%;
-  padding: 34px 10px;
-  background: #f8f9fa;
-  border-bottom: 2px solid #f59f7e;
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  opacity: 0;
-  transition: all 0.3s ease-in-out 0s; 
-}
-
-.doctor-item .post {
-  display: block;
-  font-size: 14px;
-  color: #999;
-  text-transform: capitalize; 
 }
 
 .doctor-item:hover .doctor-img:before {
@@ -570,15 +670,16 @@ a:hover {
   transform: translate3d(-43px, -19px, 0px); 
 }
 
-.doctor-item:hover .team-layer {
-  bottom: 0;
-  opacity: 1; 
-}
-
-@media (max-width: 990px) {
-  .doctor-item {
-    margin-bottom: 35px; 
-  } 
+.doctor-appointment a{
+  display: block;
+  text-align: center;
+  background-color: red;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10rem;
+  margin: 20px 25px 0;
 }
 
 /*--------------------------------------------------------------
@@ -610,7 +711,7 @@ a:hover {
 .faq .faq-list li {
   padding: 20px;
   background: #fff;
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
   border-radius: 4px;
   position: relative;
 }
@@ -705,6 +806,36 @@ a:hover {
 
 .contact-right::-webkit-scrollbar{
   width: 0;
+}
+
+.contact-item{
+  background-color: #fff;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px 20px;
+  border: 2px solid #691999;
+  margin-bottom: 25px;
+  margin-top: 40px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
+}
+
+.contact-item .contact-icon{
+  width: 80px;
+  height: 80px;
+  padding: 15px;
+  background-color: #fff;
+  margin: -40px auto 20px;
+  border-radius: 50%;
+  border: 2px solid #691999;
+}
+
+.contact-item .contact-icon img{
+  max-height: 40px;
+}
+
+.contact-item .contact-content h5{
+  font-weight: 700;
+  font-size: 24px;
 }
 
 /*--------------------------------------------------------------

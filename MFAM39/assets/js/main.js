@@ -54,6 +54,26 @@
     standardScrollElements: '.normal-scroll-item'
   });
 
+  // Recent Blogs carousel (uses the Owl Carousel library)
+  $(".recentblog-carousel").owlCarousel({
+    autoplay: true,
+    dots: false,
+    loop: true,
+    margin:30,
+    smartSpeed: 1200,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 1
+      },
+      900: {
+        items: 1
+      }
+    }
+  });
+
   // Social Media carousel (uses the Owl Carousel library)
   $(".socialmedia-carousel").owlCarousel({
     autoplay: true,
