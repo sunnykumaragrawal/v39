@@ -21,34 +21,42 @@ a:hover {
 .scrollify {
   height: 100vh;
   width: 100%;
+  position: relative;
+}
+
+.arrow-items{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 70px;
+  height: 30px;
+  display: none;
+}
+
+.arrow-items a{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.arrow-items a i{
+  color: black;
+  font-size: 22px;
+}
+
+.arrow-left{
+  margin-right: 10px;
 }
 
 .normal-scroll-item{
   padding-left: 40px;
   padding-right: 40px;
+  padding-bottom: 20px;
   position: relative;
-}
-
-.arrow-item{
-  position: absolute;
-  right: 20px;
-  top: calc(100vh - 120px);
-  width: 50px;
-  height: 100px;
-}
-
-.arrow-item a{
-  width: 50px;
-  height: 50px;
-  background-color: #691999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.arrow-item a i{
-  color: #fff;
-  font-size: 24px;
 }
 
 /*--------------------------------------------------------------
@@ -99,6 +107,7 @@ a:hover {
   background-color: #fff;
   padding: 5px;
   margin-right: 10px;
+  border-radius: 5px;
 }
 
 .nav-menu a span{
@@ -278,6 +287,7 @@ a:hover {
   background-color: #fff;
   text-align: center;
   padding: 20px;
+  border-radius: 10px;
   border: 2px solid #691999;
   margin-bottom: 25px;
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
@@ -304,6 +314,34 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
+# Counters
+--------------------------------------------------------------*/
+.count-box{
+  margin-bottom: 10px;
+}
+
+.count-box img{
+  max-height: 70px;
+  float: left;
+  margin-right: 13px;
+  margin-top: 5px;
+}
+
+.count-box span{
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.count-box p{
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@media(max-width: 767px){}
+
+@media(min-width: 768px) and (max-width: 991px){}
+
+/*--------------------------------------------------------------
 # Resources
 --------------------------------------------------------------*/
 .resource-left{
@@ -323,34 +361,39 @@ a:hover {
 .resource-item{
   background-color: #fff;
   text-align: center;
-  padding: 20px;
   border: 2px solid #691999;
   margin-bottom: 25px;
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
 }
 
 .resource-item .resource-icon{
-  width: 80px;
-  height: 80px;
-  padding: 15px;
   margin: 0 auto 20px;
-  border-radius: 50%;
-  border: 2px solid #691999;
 }
 
 .resource-item .resource-icon img{
-  max-height: 40px;
 }
 
-.resource-item .resource-content{}
+.resource-item .resource-content{
+  padding: 20px 12px;
+}
 
 .resource-item .resource-content h5{
   font-weight: 700;
   font-size: 24px;
 }
 
-.resource-item{}
-.resource-item{}
+.resource-item .resource-btn{
+  background-color: red;
+}
+
+.resource-item .resource-btn a{
+  background-color: red;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 10rem;
+}
 
 /*--------------------------------------------------------------
 # Services
@@ -373,14 +416,22 @@ a:hover {
   background-color: #fff;
   text-align: center;
   padding: 20px;
+  border-radius: 10px;
   border: 2px solid #691999;
   margin-bottom: 25px;
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease-in-out;
+}
+
+.service-item:hover{
+  background-color: #691999;
+  color: #fff;
 }
 
 .service-item .service-icon{
   width: 80px;
   height: 80px;
+  background-color: #fff;
   padding: 15px;
   margin: 0 auto 20px;
   border-radius: 50%;
@@ -389,11 +440,20 @@ a:hover {
 
 .service-item .service-icon img{
   max-height: 40px;
+  transition: all 0.5s ease-in-out;
+}
+
+.service-item:hover .service-icon img{
+  transform: rotateY(180deg);
 }
 
 .service-item .service-content h5{
   font-weight: 700;
   font-size: 24px;
+}
+
+.service-item .service-content p{
+  font-size: 18px;
 }
 
 /*--------------------------------------------------------------
@@ -458,11 +518,14 @@ a:hover {
 }
 
 .recentblog-item .recentblog-content h5{
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .recentblog-item .recentblog-content p{
-  
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .recentblog-author{
@@ -792,6 +855,121 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+.testimonial-content{
+}
+
+.testimonial-content p{
+  font-size: 24px;
+  line-height: 36px;
+  font-style: italic;
+  padding-top: 30px;
+  height: 200px;
+  margin-bottom: 30px;
+  overflow-y: scroll;
+}
+
+.testimonial-content p::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #01bfff;
+    border-radius: 10px;
+}
+
+.testimonial-content p::-webkit-scrollbar {
+    width: 10px;
+    margin-left: 0;
+    background-color: #01bfff;
+}
+
+.testimonial-content p::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #01bfff;
+    background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(#353275), to(#353275), color-stop(0.6, #353275));
+}
+
+.quote-down{
+  max-height: 40px;
+  transform: rotate(180deg);
+  margin-top: -20px;
+  margin-right: 7px;
+}
+
+.testimonial-author{
+}
+
+.testimonial-author img{
+  max-height: 90px;
+  border-radius: 50%;
+  margin-right: 15px;
+  float: left;
+}
+
+.testimonial-author h5{
+  font-weight: bold;
+}
+
+.testimonial-author span{
+  font-style: italic;
+  font-weight: 300;
+}
+
+.testimonial-carousel .owl-item {
+  float: left;
+}
+
+.testimonial-carousel{
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 110px;
+}
+
+.testimonial-carousel .owl-nav{
+  display: none;
+}
+
+.testimonial-carousel .owl-nav .owl-prev{
+  position: absolute;
+  left: calc(50% - 55px);
+  bottom: 0;
+}
+
+.testimonial-carousel .owl-nav .owl-next{
+  position: absolute;
+  right: calc(50% - 55px);
+  bottom: 0;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next{
+  background-color: #C0CB51;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(max-width: 767px){
+  .testimonial-author{
+    text-align: center;
+  }
+
+  .testimonial-author img{
+    width: 100px !important;
+    height: 100px !important;
+    margin: 15px auto;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 991px){}
+
+/*--------------------------------------------------------------
 # Contact Us
 --------------------------------------------------------------*/
 .contact-left{
@@ -810,7 +988,6 @@ a:hover {
 
 .contact-item{
   background-color: #fff;
-  color: #fff;
   text-align: center;
   padding: 0 20px 20px;
   border: 2px solid #691999;
@@ -861,6 +1038,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   min-height: 100px;
+  border: 2px solid #691999;
 }
 
 .medical-box{
@@ -869,4 +1047,40 @@ a:hover {
   justify-content: center;
   align-items: center;
   min-height: 140px;
+  border: 2px solid #691999;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #2f1708;
+  padding: 30px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
+
+@media(max-width: 767px){
+  #footer {
+    padding: 15px 0;
+    margin-left: 0;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+  #footer {
+    padding: 20px 0;
+    margin-left: 0;
+  }
 }
