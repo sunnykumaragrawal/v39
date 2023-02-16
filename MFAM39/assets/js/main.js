@@ -1,6 +1,17 @@
 !(function($) {
   "use strict";
 
+  // AOS animation
+  window.addEventListener('load', () => {
+    AOS.init({
+      duration: 1200,
+      offset: 0,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+    })
+  });
+
   // Toggle nav menu
   $(document).on('click', '.nav-toggle', function(e) {
     $('.nav-menu').toggleClass('nav-menu-active');
