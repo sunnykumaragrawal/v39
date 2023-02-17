@@ -1,17 +1,6 @@
 !(function($) {
   "use strict";
 
-  // AOS animation
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1200,
-      offset: 0,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false,
-    })
-  });
-
   // Toggle nav menu
   $(document).on('click', '.nav-toggle', function(e) {
     $('.nav-menu').toggleClass('nav-menu-active');
@@ -70,6 +59,26 @@
   $('[data-toggle="counter-up"]').counterUp({
     delay: 10,
     time: 3000
+  });
+
+  // Hero carousel (uses the Owl Carousel library)
+  $(".hero-carousel").owlCarousel({
+    autoplay: true,
+    dots: false,
+    loop: true,
+    margin:20,
+    smartSpeed: 1200,
+    responsive: {
+      0: {
+        items: 3
+      },
+      768: {
+        items: 4
+      },
+      900: {
+        items: 6
+      }
+    }
   });
 
   // Recent Blogs carousel (uses the Owl Carousel library)
@@ -152,6 +161,17 @@
         items: 5
       }
     }
+  });
+
+  // AOS animation
+  window.addEventListener('load', () => {
+    AOS.init({
+      duration: 1200,
+      offset: 0,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+    })
   });
 
 })(jQuery);
