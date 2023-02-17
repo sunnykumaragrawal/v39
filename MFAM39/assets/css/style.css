@@ -326,6 +326,7 @@ a:hover {
   border: 2px solid #691999;
   margin-bottom: 25px;
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.35);
+  transition: all 0.4s ease-in-out;
 }
 
 .about-item .about-icon{
@@ -335,6 +336,18 @@ a:hover {
   margin: 0 auto 20px;
   border-radius: 50%;
   border: 2px solid #691999;
+  background-color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+
+.about-item:hover{
+  margin-top: 65px;
+  background-color: #691999;
+  color: #fff;
+}
+
+.about-item:hover .about-icon{
+  margin: -65px auto 20px;
 }
 
 .about-item .about-icon img{
