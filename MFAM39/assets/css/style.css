@@ -31,7 +31,6 @@ a:hover {
   width: 70px;
   height: 30px;
   display: flex;
-  opacity: 0.3;
 }
 
 .arrow-items a{
@@ -51,6 +50,21 @@ a:hover {
 
 .arrow-left{
   margin-right: 10px;
+  opacity: 0.3;
+  transition: all 0.4s ease-in-out;
+}
+
+.arrow-left:hover{
+  opacity: 0.5;
+}
+
+.arrow-right{
+  opacity: 0.3;
+  transition: all 0.4s ease-in-out;
+}
+
+.arrow-right:hover{
+  opacity: 0.5;
 }
 
 .normal-scroll-item{
@@ -188,6 +202,7 @@ a:hover {
   background-color: #fff;
   text-align: center;
   padding: 20px;
+  height: 80px;
 }
 
 .hero-left .hero-logo span{
@@ -196,6 +211,7 @@ a:hover {
   padding: 10px 14px;
   margin: 0 3px;
   font-weight: 800;
+  border-radius: 50%;
 }
 
 .span1{background-color: red;}
@@ -208,28 +224,75 @@ a:hover {
 }
 
 .hero-right{
-  padding: 60px 30px;
+  padding: 100px 60px;
 }
 
 .hero-icon{
   padding: 20px;
   text-align: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.hero-icon:hover{
+  border: 7px dashed #691999;
+  border-radius: 30px;
 }
 
 .hero-content{
   text-align: center;
-  padding-top: 40px;
+  padding-top: 50px;
 }
 
 .hero-content h1{
   font-size: 48px;
   font-weight: 800;
   line-height: 56px;
+  background-color: #691999;
+  color: #fff;
+  width: 80%;
+  margin: 0 auto 30px;
+  padding: 15px 20px 5px;
 }
 
 .hero-content p{
   font-size: 20px;
   line-height: 30px;
+}
+
+.hero-btns{
+  margin-top: 50px;
+}
+
+.hero-btns a{
+  padding: 16px 28px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.hero-btn1{
+  background-color: #691999;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.hero-btn1:hover{
+  border: 3px solid #691999;
+  background-color: #fff;
+  color: #691999;
+}
+
+.hero-btn2{
+  background-color: red;
+  color: #fff;
+}
+
+.hero-btn2:hover{
+  border: 3px solid red;
+  background-color: #fff;
+  color: red;
 }
 
 /*--------------------------------------------------------------
@@ -295,6 +358,15 @@ a:hover {
   border: 3px solid #fff;
   padding: 16px 30px;
   color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+
+.strip-btn:hover a{
+  background-color: #fff;
+  color: #691999;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10rem;
 }
 
 /*--------------------------------------------------------------
@@ -449,15 +521,32 @@ a:hover {
 
 .resource-item .resource-content{
   padding: 20px 12px;
+  transition: all 0.4s ease-in-out;
+}
+
+.resource-item:hover .resource-content{
+  background-color: #691999;
+  color: #fff;
 }
 
 .resource-item .resource-content h5{
   font-weight: 700;
   font-size: 24px;
+  transition: all 0.4s ease-in-out;
+}
+
+.resource-item .resource-content p{
+  font-size: 18px;
+  transition: all 0.4s ease-in-out;
 }
 
 .resource-item .resource-btn{
   background-color: #691999;
+  transition: all 0.4s ease-in-out;
+}
+
+.resource-item:hover .resource-btn{
+  background-color: red;
 }
 
 .resource-item .resource-btn a{
@@ -467,6 +556,11 @@ a:hover {
   font-weight: 600;
   padding: 14px 28px;
   border-radius: 10rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.resource-item:hover .resource-btn a{
+  background-color: red;
 }
 
 /*--------------------------------------------------------------
@@ -518,7 +612,7 @@ a:hover {
 }
 
 .service-item:hover .service-icon img{
-  transform: rotateY(180deg);
+  transform: rotateY(360deg);
 }
 
 .service-item .service-content h5{
@@ -551,7 +645,6 @@ a:hover {
   background-color: #fff;
   height: 120px;
   padding: 20px;
-  margin-bottom: 25px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -818,6 +911,11 @@ a:hover {
   font-weight: 600;
   border-radius: 10rem;
   margin: 20px 25px 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.doctor-block:hover .doctor-appointment a{
+  background-color: red;
 }
 
 /*--------------------------------------------------------------
@@ -1058,10 +1156,16 @@ a:hover {
   background-color: #fff;
   text-align: center;
   padding: 0 20px 20px;
+  border-radius: 10px;
   border: 2px solid #691999;
   margin-bottom: 25px;
   margin-top: 65px;
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.35);
+  transition-delay: 0.2s;
+  transition: all 0.4s ease-in-out;
+}
+
+.contact-item:hover{
 }
 
 .contact-item .contact-icon{
@@ -1072,6 +1176,11 @@ a:hover {
   margin: -65px auto 20px;
   border-radius: 50%;
   border: 2px solid #691999;
+  transition: all 0.4s ease-in-out;
+}
+
+.contact-item:hover .contact-icon{
+  transform: rotate(360deg);
 }
 
 .contact-item .contact-icon img{
@@ -1110,7 +1219,13 @@ a:hover {
   justify-content: center;
   align-items: center;
   min-height: 100px;
-  border: 2px solid #691999;
+  transition: all 0.4s ease-in-out;
+}
+
+.social-block:hover{
+  border: 8px dashed #691999;
+  padding: 20px;
+  border-radius: 30px;
 }
 
 .medical-box{
@@ -1119,7 +1234,13 @@ a:hover {
   justify-content: center;
   align-items: center;
   min-height: 140px;
-  border: 2px solid #691999;
+  transition: all 0.4s ease-in-out;
+}
+
+.medical-box:hover{
+  border: 8px dashed #691999;
+  padding: 20px;
+  border-radius: 30px;
 }
 
 /*--------------------------------------------------------------
