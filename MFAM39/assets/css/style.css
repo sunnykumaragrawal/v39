@@ -223,6 +223,10 @@ a:hover {
   padding-top: 15px;
 }
 
+.hero-img img{
+  transform: rotateY(180deg);
+}
+
 .hero-right{
   padding: 100px 60px;
 }
@@ -484,6 +488,11 @@ a:hover {
   border: 2px solid #691999;
   margin-bottom: 40px;
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.35);
+  transition: all 0.4s ease-in-out;
+}
+
+.resource-item:hover{
+  border-color: red;
 }
 
 .resource-item .resource-icon{
@@ -522,11 +531,6 @@ a:hover {
 .resource-item .resource-content{
   padding: 20px 12px;
   transition: all 0.4s ease-in-out;
-}
-
-.resource-item:hover .resource-content{
-  background-color: #691999;
-  color: #fff;
 }
 
 .resource-item .resource-content h5{
