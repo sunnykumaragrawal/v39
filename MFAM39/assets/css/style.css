@@ -195,11 +195,11 @@ a:hover {
 
 .hero-left{
   height: 100vh;
-  background-color: #691999;
+  background-color: #fff7f2;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
 }
 
 .hero-left .hero-logo{
-  background-color: #fff;
   text-align: center;
   padding: 20px;
   height: 80px;
@@ -220,31 +220,26 @@ a:hover {
 .span4{background-color: blue;}
 
 .hero-img{
-  padding-top: 15px;
 }
 
 .hero-img img{
-  transform: rotateY(180deg);
 }
 
 .hero-right{
-  padding: 100px 60px;
+  padding: 100px 70px;
+  background-color: #691999;
 }
 
 .hero-icon{
   padding: 20px;
   text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
   transition: all 0.4s ease-in-out;
-}
-
-.hero-icon:hover{
-  border: 7px dashed #691999;
-  border-radius: 30px;
 }
 
 .hero-content{
   text-align: center;
-  padding-top: 50px;
 }
 
 .hero-content h1{
@@ -254,13 +249,16 @@ a:hover {
   background-color: #691999;
   color: #fff;
   width: 80%;
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
+  text-decoration: underline;
   padding: 15px 20px 5px;
 }
 
 .hero-content p{
   font-size: 20px;
   line-height: 30px;
+  margin-top: 40px;
+  color: #fff;
 }
 
 .hero-btns{
@@ -273,6 +271,7 @@ a:hover {
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 10rem;
+  border: 3px solid #fff;
   transition: all 0.4s ease-in-out;
 }
 
@@ -371,6 +370,40 @@ a:hover {
   font-size: 20px;
   font-weight: 600;
   border-radius: 10rem;
+}
+
+@media(max-width: 767px){
+  .strips{
+    padding: 25px 15px;
+    height: auto;
+  }
+
+
+  .strip-icon{
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+  }
+
+  .strip-icon img{
+    max-height: 70px;
+  }
+
+  .strip-title h4{
+    font-size: 22px;
+    line-height: 32px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+
+  .strip-btn a{
+    border: 2px solid #fff;
+    padding: 12px 22px;
+  }
+
+  .strip-btn:hover a{
+    font-size: 18px;
+  }
 }
 
 /*--------------------------------------------------------------
